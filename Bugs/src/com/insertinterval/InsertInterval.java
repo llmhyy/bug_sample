@@ -149,10 +149,11 @@ public class InsertInterval {
 		
 		List<Interval> newList = insert.insert(list, insertInterval);
 		
+		String str = "";
 		for(Interval interval: newList){
-			System.out.print(interval);
+			str += interval.toString();
 		}
-		System.out.println();
+		System.out.println(str);
 	}
 
 }
