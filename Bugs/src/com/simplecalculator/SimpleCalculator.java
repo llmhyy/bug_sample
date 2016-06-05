@@ -122,7 +122,8 @@ public class SimpleCalculator {
 	 */
 	public static void main(String[] args) {
 		SimpleCalculator calculator = new SimpleCalculator();
-		int value = calculator.calculate("(((1 + ((1 + 2) + (2 - 1)) - (1 - 3)) + 1) + 1) + 1");
+		String expression = "(((1+((1+2)+(2-1))-(1-3))+1)+1)+1";
+		int value = calculator.calculate(expression);
 //		int value = calculator.calculate("(1+2)");
 		System.out.println(value);
 	}
