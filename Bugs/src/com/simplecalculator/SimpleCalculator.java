@@ -37,7 +37,7 @@ public class SimpleCalculator {
 			char[] charList = expression.toCharArray();
 			for (int i = 0; i < charList.length; i++) {
 				char ch = charList[i];
-				if (ch != '(') {
+				if (ch == '(') {
 					StackElement element = new StackElement(ch, i);
 					parenthesisStack.push(element);
 				} else if (ch == ')') {
