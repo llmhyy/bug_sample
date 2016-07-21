@@ -37,7 +37,7 @@ public class SimpleCalculator {
 			char[] charList = expression.toCharArray();
 			for (int i = 0; i < charList.length; i++) {
 				char ch = charList[i];
-				if (ch == '(') {
+				if (ch != '(') {
 					StackElement element = new StackElement(ch, i);
 					parenthesisStack.push(element);
 				} else if (ch == ')') {
@@ -47,8 +47,7 @@ public class SimpleCalculator {
 					int value = evaluateSimpleFormula(simpleExpression);
 
 					String beforeExpression = expression.substring(0, element.index);
-					String afterExpression = (i >= expression.length()) ? ""
-							: expression.substring(i + 1, expression.length());
+					String afterExpression = (i >= expression.length()) ? "" : expression.substring(i + 1, expression.length());
 
 					expression = beforeExpression + value + afterExpression;
 					break;
