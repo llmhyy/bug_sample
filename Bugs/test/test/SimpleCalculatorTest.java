@@ -1,18 +1,17 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.junit.Test;
+
+import com.simplecalculator.SimpleCalculator;
 
 import junit.framework.Assert;
 
-import org.junit.Test;
-
-import com.insertinterval.InsertInterval;
-import com.insertinterval.Interval;
-import com.simplecalculator.SimpleCalculator;
-
 public class SimpleCalculatorTest {
 
+	public SimpleCalculatorTest() {
+		System.currentTimeMillis();
+	}
+	
 	@Test
 	public void testCalculator() {
 		SimpleCalculator calculator = new SimpleCalculator();
